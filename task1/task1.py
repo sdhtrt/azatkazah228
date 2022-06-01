@@ -19,9 +19,9 @@ for part in parts:
             print(index, end=' ')
             for char in part:
                 if char in alphabet:
-                    print(alphabet[(index + alphabet.index(char)) % len(alphabet)], end='')
+                    print(alphabet[(alphabet.index(char) - index) % len(alphabet)], end='')
                 elif char in bigAlphabet:
-                    print(bigAlphabet[(index + bigAlphabet.index(char)) % len(bigAlphabet)], end='')
+                    print(bigAlphabet[(bigAlphabet.index(char) - index) % len(bigAlphabet)], end='')
                 else:
                     print(char, end='')
             print('')
