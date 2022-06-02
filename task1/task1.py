@@ -1,6 +1,9 @@
 with open('task1.txt') as file:
     text = file.read()
 
+with open('words.txt') as file:
+    words = file.read().split()
+
 alphabet = [chr(i) for i in range(ord('a'), ord('z') + 1)]
 bigAlphabet = [chr(i) for i in range(ord('A'), ord('Z') + 1)]
 punctuation = '.!?'
@@ -14,17 +17,20 @@ for i in range(len(text)):
 
 for part in parts:
     if '?' in part:
-        print()
         for index in range(len(alphabet)):
-            print(index, end=' ')
+            sentence = ''
             for char in part:
                 if char in alphabet:
-                    print(alphabet[(alphabet.index(char) - index) % len(alphabet)], end='')
+                    sentence += alphabet[(alphabet.index(char) - index) % len(alphabet)]
                 elif char in bigAlphabet:
-                    print(bigAlphabet[(bigAlphabet.index(char) - index) % len(bigAlphabet)], end='')
+                    sentence += bigAlphabet[(bigAlphabet.index(char) - index) % len(bigAlphabet)]
                 else:
-                    print(char, end='')
-            print('')
+                    sentence += char
+            counter = 0
+            for word in sentence.split():
+                if word.lower() in words:
+                    print(index, sentence[1:])
+                    break
 
 
 
