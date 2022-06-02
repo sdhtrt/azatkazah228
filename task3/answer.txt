@@ -1,1 +1,5 @@
-witlhbgwy_mos2qg53crwwz1zvsln78j5alm
+witlhbgwy_mos2qg53crwwz1zvsln78j5alm - шифр Вернама
+pboxhbg1p}1lz4tp93c{y5z1{wsx}t8i9al5 - шифр Виженера
+
+В задании говорится про шифр Вернама(ксор), а в примере показан шифр Виженера.
+Поэтому 2 ответа для 2 разных шифров.
